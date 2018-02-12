@@ -14,9 +14,7 @@
       margin-top: 30px;
     }
 
-    #messageArea{
-      display: none;
-    }
+
 
     #actions{
       display:none;
@@ -31,7 +29,7 @@
     <div class="container">
 
       <div id="userFormArea" class="row">
-        <div class="col-xs-12">
+        <div class="col-md-12">
           <form id="userForm">
             <div class="form-group">
               <label>Enter username</label>
@@ -46,12 +44,11 @@
 
       <div id="messageArea" class="row">
 
-        <div class="col-xs-6">
+        <div class="col-md-6">
 
 
 
           <div class="card">
-            <div class="col-xs-12">
 
               <h3>Dealer:</h3>
               <div class="card-block" id="dealer">
@@ -59,47 +56,44 @@
 
                 </div>
               </div>
-            </div>
           </div>
 
 
 
           <div class="card">
-            <div class="col-xs-12">
+
 
               <h3>Players:</h3>
               <div class="card-block" id="players">
                 <div class="d-flex justify-content-end">
                 </div>
               </div>
-            </div>
-          </div>
 
-          <div id="actions" class="card-block">
-              <input type="submit" id="hit" class="btn btn-primary" value="Hit" />
-              <input type="submit" id="stay" class="btn btn-primary" value="Stick" />
-          </div>
 
-          <div class="card-block">
-            <h3>Players:</h3>
+              <div id="actions" class="card-block">
+                  <input type="submit" id="hit" class="btn btn-primary" value="Hit" />
+                  <input type="submit" id="stay" class="btn btn-primary" value="Stick" />
+              </div>
 
-            <ul class="list-group" id="users"></ul>
 
           </div>
+
 
         </div>
 
-        <div class="col-xs-6">
-          <div class="card-block" id="chat"><ul></ul></div>
+        <div class="col-md-6">
+
 
           <form id="messageForm">
             <div class="form-group">
               <label>Enter message</label>
-              <textarea class="form-control" id="message"></textarea>
-              <br />
               <input type="submit" class="btn btn-primary" value="Send Message" />
+              <textarea class="form-control" id="message"></textarea>
+              
             </div>
           </form>
+
+          <div class="card-block" id="chat"><ul></ul></div>
 
         </div>
 
@@ -125,6 +119,8 @@
       var $hit = $('#hit');
       var $stay = $('#stay');
       var $actions = $('#actions');
+
+      $messageArea.hide();
 
       $hit.click(function(e){
         e.preventDefault();
